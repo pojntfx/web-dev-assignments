@@ -16,7 +16,13 @@
 >
   Make text bold
 </button>
-<button>Make text red</button>
+<button
+  onclick="(() => {
+      document.getElementById('text-to-change').style = 'color: red'
+    })()"
+>
+  Make text red
+</button>
 
 <button>Load picture</button>
 <button>Remove picture</button>
