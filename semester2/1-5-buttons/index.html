@@ -2,12 +2,21 @@
 <meta charset="UTF-8" />
 <title>5 Buttons</title>
 
-<p id="text-to-change">
-  Quis laborum qui minim aute fugiat aute. Pariatur id ut velit in. Dolore est
-  laboris cillum ad elit veniam esse est adipisicing quis. In qui dolor culpa
-  aliquip voluptate est anim minim culpa anim elit consectetur. In ut
-  consectetur veniam nulla.
-</p>
+<div>
+  <p id="text-to-change">
+    Quis laborum qui minim aute fugiat aute. Pariatur id ut velit in. Dolore est
+    laboris cillum ad elit veniam esse est adipisicing quis. In qui dolor culpa
+    aliquip voluptate est anim minim culpa anim elit consectetur. In ut
+    consectetur veniam nulla.
+  </p>
+
+  <img
+    id="image-to-change"
+    src="https://http.cat/404"
+    alt="Cat picture"
+    style="display: none"
+  />
+</div>
 
 <button
   onclick="(() => {
@@ -24,7 +33,28 @@
   Make text red
 </button>
 
-<button>Load picture</button>
-<button>Remove picture</button>
+<button
+  onclick="(() => {
+    const img = document.getElementById('image-to-change')
+    
+    img.style = 'display: inherit'
+    img.src = `https://http.cat/${Math.floor(Math.random() * 500)}`
+})()"
+>
+  Load picture
+</button>
+<button
+  onclick="(() => {
+    document.getElementById('image-to-change').style = 'display: none'
+})()"
+>
+  Remove picture
+</button>
 
-<button>Change font size</button>
+<button
+  onclick="(() => {
+      document.getElementById('text-to-change').style = `font-size: ${Math.floor(Math.random() * 50)}pt`
+})()"
+>
+  Change font size
+</button>
