@@ -2,7 +2,7 @@
 
 ## Overview
 
-Assignments for the Web Development course at HDM Stuttgart University.
+Assignments for the Web Development courses (semester 1 and 2) at HDM Stuttgart University.
 
 ## License
 
